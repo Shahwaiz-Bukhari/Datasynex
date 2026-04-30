@@ -1,0 +1,99 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1a6fff;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate3d(-50%, -50%, 0);
+  mix-blend-mode: normal;
+  transition: width 0.25s cubic-bezier(0.65, 0, 0.35, 1),
+    height 0.25s cubic-bezier(0.65, 0, 0.35, 1),
+    background 0.25s ease, opacity 0.25s ease;
+  will-change: transform;
+}
+
+.follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(26, 111, 255, 0.45);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+    height 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+    border-color 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
+  backdrop-filter: invert(0%);
+}
+
+.cursor.hovering {
+  opacity: 0;
+}
+
+.follower.hovering {
+  width: 64px;
+  height: 64px;
+  border-color: rgba(26, 111, 255, 0.85);
+  background: rgba(26, 111, 255, 0.06);
+}
+
+.follower.text {
+  width: 96px;
+  height: 96px;
+  border-color: transparent;
+  background: rgba(26, 111, 255, 0.08);
+  backdrop-filter: blur(2px);
+}
+
+.cursor.text {
+  width: 4px;
+  height: 4px;
+  background: #38bdf8;
+}
+
+.cursor.hidden,
+.follower.hidden {
+  opacity: 0;
+}
+
+.label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  pointer-events: none;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: #1a6fff;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(26, 111, 255, 0.18);
+  border-radius: 999px;
+  padding: 4px 10px;
+  transform: translate3d(-50%, calc(-50% + 36px), 0);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+}
+
+.label.show {
+  opacity: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor,
+  .follower,
+  .label {
+    display: none;
+  }
+}

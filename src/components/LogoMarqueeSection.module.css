@@ -1,0 +1,134 @@
+.section {
+  position: relative;
+  padding: 96px 0 80px;
+  background: #f5f8fd;
+  overflow: hidden;
+  border-top: 1px solid rgba(26, 111, 255, 0.08);
+  border-bottom: 1px solid rgba(26, 111, 255, 0.08);
+}
+
+.section::before,
+.section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.section::before {
+  left: 0;
+  background: linear-gradient(90deg, #f5f8fd 0%, transparent 100%);
+}
+
+.section::after {
+  right: 0;
+  background: linear-gradient(-90deg, #f5f8fd 0%, transparent 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+  padding: 0 24px;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1a6fff;
+  margin-bottom: 16px;
+}
+
+.kicker::before,
+.kicker::after {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: #1a6fff;
+}
+
+.title {
+  font-family: var(--font-syne), sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #0a1628;
+  line-height: 1.2;
+}
+
+.title span {
+  background: linear-gradient(135deg, #1a6fff, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  width: max-content;
+  gap: 64px;
+  align-items: center;
+  padding: 16px 0;
+  will-change: transform;
+}
+
+.row + .row {
+  margin-top: 8px;
+}
+
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 111, 255, 0.08);
+  font-family: var(--font-syne), sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  color: #0a1628;
+  white-space: nowrap;
+  transition: transform 0.4s ease, border-color 0.4s ease, color 0.4s ease, background 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.logo:hover {
+  transform: translateY(-3px);
+  border-color: rgba(26, 111, 255, 0.4);
+  background: #fff;
+  color: #1a6fff;
+}
+
+.logoIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1a6fff, #38bdf8);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.note {
+  margin-top: 56px;
+  text-align: center;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(10, 22, 40, 0.5);
+}

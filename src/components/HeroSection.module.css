@@ -1,0 +1,193 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background: var(--background);
+  isolation: isolate;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.55) 55%, var(--background) 90%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, var(--background) 100%);
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(26, 111, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 111, 255, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 60% 70% at 30% 50%, black, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 30% 50%, black, transparent 90%);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(26, 111, 255, 0.08), rgba(56, 189, 248, 0.06));
+  border: 1px solid rgba(26, 111, 255, 0.18);
+  color: #1a6fff;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+
+.kickerDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1a6fff;
+  box-shadow: 0 0 10px rgba(26, 111, 255, 0.7);
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.headline {
+  font-family: var(--font-syne), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  color: #0a1628;
+}
+
+.headlineWord {
+  display: inline-block;
+  margin-right: 0.25em;
+  perspective: 1000px;
+}
+
+.headlineChar {
+  display: inline-block;
+  will-change: transform;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #1a6fff 0%, #38bdf8 50%, #1a6fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+.statCard {
+  position: relative;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(26, 111, 255, 0.12);
+  box-shadow: 0 8px 30px rgba(10, 22, 40, 0.05);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.statCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(26, 111, 255, 0.12), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(26, 111, 255, 0.3);
+  box-shadow: 0 14px 36px rgba(26, 111, 255, 0.12);
+}
+
+.statCard:hover::before {
+  opacity: 1;
+}
+
+.statValue {
+  font-family: var(--font-syne), sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0a1628;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5a7090;
+  margin-top: 4px;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.scrollLabel {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #5a7090;
+  writing-mode: horizontal-tb;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, #1a6fff, transparent);
+  background-size: 100% 200%;
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0% { background-position: 0% 100%; }
+  100% { background-position: 0% -100%; }
+}
+
+@media (max-width: 900px) {
+  .scrollIndicator { display: none; }
+}
+
+@media (max-width: 600px) {
+  .gridOverlay { display: none; }
+}
