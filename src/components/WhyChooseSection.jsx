@@ -7,8 +7,8 @@ const MotionBox = motion.create(Box);
 
 const reasons = [
   {
-    title: "UK-headquartered global operations",
-    text: "London-based leadership with delivery hubs across Europe, North America and APAC keep your timezones covered around the clock.",
+    title: "End-to-end data ownership",
+    text: "From ingestion to visualization, we own the full data lifecycle — ensuring consistency, traceability, and zero blind spots across your stack.",
   },
   {
     title: "Hands-on cloud & data expertise",

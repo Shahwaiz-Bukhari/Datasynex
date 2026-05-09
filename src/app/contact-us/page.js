@@ -10,14 +10,13 @@ const contacts = [
   { label: "EMAIL", value: "hello@datasynex.com", href: "mailto:hello@datasynex.com" },
   { label: "SALES", value: "sales@datasynex.com", href: "mailto:sales@datasynex.com" },
   { label: "PHONE (UK)", value: "+44 20 0000 0000", href: "tel:+442000000000" },
-  { label: "RESPONSE TIME", value: "Within 4 business hours" },
 ];
 
-const offices = [
-  { city: "London", country: "United Kingdom", address: "12 Finsbury Square, EC2A 1AS", note: "HQ" },
-  { city: "Lisbon", country: "Portugal", address: "Avenida da Liberdade 200, 1250-147" },
-  { city: "Toronto", country: "Canada", address: "100 King St W, M5X 1C9" },
-];
+// const offices = [
+//   { city: "London", country: "United Kingdom", address: "12 Finsbury Square, EC2A 1AS", note: "HQ" },
+//   { city: "Lisbon", country: "Portugal", address: "Avenida da Liberdade 200, 1250-147" },
+//   { city: "Toronto", country: "Canada", address: "100 King St W, M5X 1C9" },
+// ];
 
 const faqs = [
   { q: "How quickly can you start?", a: "Architecture sprints typically start within 1–2 weeks. Build engagements within 3–4 weeks depending on team availability." },
@@ -26,8 +25,8 @@ const faqs = [
   { q: "Can you work with our existing team?", a: "Absolutely — most engagements are embedded. We pair, code-review and document so your team grows with the platform." },
 ];
 
-const projectTypes = ["Architecture audit", "ETL / data pipeline build", "Cloud migration", "Data warehouse / lakehouse", "ML platform", "Security & compliance", "Other"];
-const budgets = ["< £25k", "£25k – £75k", "£75k – £200k", "£200k+", "Not sure yet"];
+// const projectTypes = ["Architecture audit", "ETL / data pipeline build", "Cloud migration", "Data warehouse / lakehouse", "ML platform", "Security & compliance", "Other"];
+// const budgets = ["< £25k", "£25k – £75k", "£75k – £200k", "£200k+", "Not sure yet"];
 
 export default function ContactUsPage() {
   return (
@@ -77,7 +76,7 @@ export default function ContactUsPage() {
                   <Grid size={{ xs: 12, sm: 6 }}>
                     <TextField label="Role" fullWidth />
                   </Grid>
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  {/* <Grid size={{ xs: 12, sm: 6 }}>
                     <TextField select label="Project Type" fullWidth defaultValue="">
                       {projectTypes.map((t) => <MenuItem key={t} value={t}>{t}</MenuItem>)}
                     </TextField>
@@ -86,7 +85,7 @@ export default function ContactUsPage() {
                     <TextField select label="Budget" fullWidth defaultValue="">
                       {budgets.map((b) => <MenuItem key={b} value={b}>{b}</MenuItem>)}
                     </TextField>
-                  </Grid>
+                  </Grid> */}
                   <Grid size={{ xs: 12 }}>
                     <TextField label="Tell us about your project" multiline minRows={5} fullWidth />
                   </Grid>
@@ -104,7 +103,7 @@ export default function ContactUsPage() {
         </Container>
       </Box>
 
-      <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "custom.surface" }}>
+      {/* <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "custom.surface" }}>
         <Container maxWidth="xl">
           <Typography variant="overline" sx={{ color: "primary.main", letterSpacing: "0.18em" }}>OFFICES</Typography>
           <Typography variant="h2" sx={{ fontSize: { xs: "1.8rem", md: "2.4rem" }, mt: 1, fontFamily: "var(--font-syne), sans-serif" }}>Where we work from</Typography>
@@ -121,7 +120,7 @@ export default function ContactUsPage() {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
 
       <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "background.default" }}>
         <Container maxWidth="xl">

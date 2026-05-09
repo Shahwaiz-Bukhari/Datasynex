@@ -8,7 +8,6 @@ import styles from "./Navbar.module.css";
 const navItems = [
   { label: "Services", href: "/services" },
   { label: "Technology", href: "/technology" },
-  { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact-us" },
 ];

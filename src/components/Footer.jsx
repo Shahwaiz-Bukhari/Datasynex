@@ -23,7 +23,7 @@ const services = [
 const company = [
   { label: "About", href: "/about" },
   { label: "Technology", href: "/technology" },
-  { label: "Industries", href: "/industries" },
+  // { label: "Industries", href: "/industries" },
   { label: "Contact", href: "/contact-us" },
 ];
 
@@ -87,7 +87,7 @@ export default function Footer() {
       <span className={`${styles.glowOrb} ${styles.glowOrb2}`} aria-hidden />
 
       <Container maxWidth="xl">
-        <div className={styles.cta}>
+        {/* <div className={styles.cta}>
           <div>
             <h2 className={styles.ctaTitle}>
               Ready to scale your <span>data infrastructure</span>?
@@ -106,7 +106,7 @@ export default function Footer() {
             Book a Call
             <span>→</span>
           </Link>
-        </div>
+        </div> */}
 
         <div className={styles.grid}>
           <div className={styles.brand}>
@@ -115,8 +115,8 @@ export default function Footer() {
               Data<span>synex</span>
             </Link>
             <p className={styles.brandText}>
-              Global data engineering and cloud solutions from our UK head office to scaling
-              teams worldwide. Production-grade systems, built to last.
+              Enterprise-grade data engineering and cloud solutions for teams that demand reliability,
+              scale, and performance. Production-grade systems, built to last.
             </p>
             <div className={styles.socials}>
               {socials.map((s) => (

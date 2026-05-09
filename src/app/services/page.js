@@ -46,17 +46,17 @@ const services = [
   },
 ];
 
-const engagement = [
-  { title: "Architecture Sprint", duration: "1–2 weeks", text: "Audit your current stack, identify the highest-leverage 3 fixes, deliver a roadmap." },
-  { title: "Build & Ship", duration: "6–12 weeks", text: "Embedded squad delivers a production system end-to-end with hand-off documentation." },
-  { title: "Embedded Team", duration: "Ongoing", text: "Senior engineers join your team long-term to scale the platform alongside you." },
-];
+// const engagement = [
+//   { title: "Architecture Sprint", duration: "1–2 weeks", text: "Audit your current stack, identify the highest-leverage 3 fixes, deliver a roadmap." },
+//   { title: "Build & Ship", duration: "6–12 weeks", text: "Embedded squad delivers a production system end-to-end with hand-off documentation." },
+//   { title: "Embedded Team", duration: "Ongoing", text: "Senior engineers join your team long-term to scale the platform alongside you." },
+// ];
 
-const pricing = [
-  { name: "Sprint", price: "from £8k", desc: "Architecture audit + roadmap", features: ["1–2 week engagement", "Async + 3 live workshops", "Written roadmap deliverable", "30-day Q&A follow-up"] },
-  { name: "Project", price: "from £45k", desc: "End-to-end production build", features: ["6–12 week delivery", "2–3 senior engineers", "Full code + docs handover", "30-day post-launch support"], popular: true },
-  { name: "Embedded", price: "from £18k/mo", desc: "Senior engineers in your team", features: ["Long-term partnership", "Flexible team composition", "Quarterly architecture review", "Direct Slack access"] },
-];
+// const pricing = [
+//   { name: "Sprint", price: "from £8k", desc: "Architecture audit + roadmap", features: ["1–2 week engagement", "Async + 3 live workshops", "Written roadmap deliverable", "30-day Q&A follow-up"] },
+//   { name: "Project", price: "from £45k", desc: "End-to-end production build", features: ["6–12 week delivery", "2–3 senior engineers", "Full code + docs handover", "30-day post-launch support"], popular: true },
+//   { name: "Embedded", price: "from £18k/mo", desc: "Senior engineers in your team", features: ["Long-term partnership", "Flexible team composition", "Quarterly architecture review", "Direct Slack access"] },
+// ];
 
 export default function ServicesPage() {
   return (
@@ -104,7 +104,7 @@ export default function ServicesPage() {
         </Container>
       </Box>
 
-      <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "custom.surface" }}>
+      {/* <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "custom.surface" }}>
         <Container maxWidth="xl">
           <Typography variant="overline" sx={{ color: "primary.main", letterSpacing: "0.18em" }}>HOW WE ENGAGE</Typography>
           <Typography variant="h2" sx={{ fontSize: { xs: "1.8rem", md: "2.4rem" }, mt: 1, fontFamily: "var(--font-syne), sans-serif" }}>Three ways to work with us</Typography>
@@ -154,7 +154,7 @@ export default function ServicesPage() {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
 
       <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "custom.surface" }}>
         <Container maxWidth="xl">

@@ -8,12 +8,12 @@ export const metadata = {
     "Datasynex is a UK-headquartered global data engineering and cloud solutions company helping modern teams build scalable, secure infrastructure.",
 };
 
-const stats = [
-  { value: "60+", label: "Production deployments" },
-  { value: "2.4 PB", label: "Data migrated to lakehouse" },
-  { value: "12", label: "Countries served" },
-  { value: "99.95%", label: "Average uptime SLO" },
-];
+// const stats = [
+//   { value: "60+", label: "Production deployments" },
+//   { value: "2.4 PB", label: "Data migrated to lakehouse" },
+//   { value: "12", label: "Countries served" },
+//   { value: "99.95%", label: "Average uptime SLO" },
+// ];
 
 const principles = [
   { title: "Engineering, not consulting", text: "We write production code, run incident reviews, and own outcomes — not just write reports." },
@@ -22,21 +22,21 @@ const principles = [
   { title: "Knowledge transfer always", text: "We document, pair-program and train your team. By the time we leave, you own everything." },
 ];
 
-const timeline = [
-  { year: "2019", title: "Founded in London", text: "Started as a two-person consultancy serving fintech startups." },
-  { year: "2021", title: "Series-grade clients", text: "Scaled team to 14 engineers; first AWS Premier engagement delivered." },
-  { year: "2023", title: "Global delivery", text: "Opened delivery hubs in Lisbon and Toronto to support 24/7 clients." },
-  { year: "2025", title: "Lakehouse practice", text: "Launched dedicated lakehouse, streaming and ML-platform practices." },
-];
+// const timeline = [
+//   { year: "2019", title: "Founded in London", text: "Started as a two-person consultancy serving fintech startups." },
+//   { year: "2021", title: "Series-grade clients", text: "Scaled team to 14 engineers; first AWS Premier engagement delivered." },
+//   { year: "2023", title: "Global delivery", text: "Opened delivery hubs in Lisbon and Toronto to support 24/7 clients." },
+//   { year: "2025", title: "Lakehouse practice", text: "Launched dedicated lakehouse, streaming and ML-platform practices." },
+// ];
 
-const team = [
-  { name: "Asha Patel", role: "Co-founder & Principal Architect", initials: "AP" },
-  { name: "Ben Whitfield", role: "Co-founder & Head of Delivery", initials: "BW" },
-  { name: "Carla Mendes", role: "VP Data Engineering", initials: "CM" },
-  { name: "David Owusu", role: "Head of Cloud Security", initials: "DO" },
-  { name: "Elena Rossi", role: "Director, ML Platform", initials: "ER" },
-  { name: "Fatima Al-Sayed", role: "Lead Solutions Architect", initials: "FA" },
-];
+// const team = [
+//   { name: "Asha Patel", role: "Co-founder & Principal Architect", initials: "AP" },
+//   { name: "Ben Whitfield", role: "Co-founder & Head of Delivery", initials: "BW" },
+//   { name: "Carla Mendes", role: "VP Data Engineering", initials: "CM" },
+//   { name: "David Owusu", role: "Head of Cloud Security", initials: "DO" },
+//   { name: "Elena Rossi", role: "Director, ML Platform", initials: "ER" },
+//   { name: "Fatima Al-Sayed", role: "Lead Solutions Architect", initials: "FA" },
+// ];
 
 export default function AboutPage() {
   return (
@@ -58,7 +58,7 @@ export default function AboutPage() {
         </Container>
       </Box>
 
-      <Box sx={{ py: { xs: 6, md: 7 }, backgroundColor: "background.default", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "divider" }}>
+      {/* <Box sx={{ py: { xs: 6, md: 7 }, backgroundColor: "background.default", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "divider" }}>
         <Container maxWidth="xl">
           <Grid container spacing={3}>
             {stats.map((s) => (
@@ -69,7 +69,7 @@ export default function AboutPage() {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
 
       <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "background.default" }}>
         <Container maxWidth="xl">
@@ -112,7 +112,7 @@ export default function AboutPage() {
         </Container>
       </Box>
 
-      <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "background.default" }}>
+      {/* <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "background.default" }}>
         <Container maxWidth="xl">
           <Typography variant="overline" sx={{ color: "primary.main", letterSpacing: "0.18em" }}>OUR JOURNEY</Typography>
           <Typography variant="h2" sx={{ fontSize: { xs: "1.8rem", md: "2.4rem" }, mt: 1, fontFamily: "var(--font-syne), sans-serif" }}>
@@ -130,9 +130,9 @@ export default function AboutPage() {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
 
-      <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "custom.surface" }}>
+      {/* <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "custom.surface" }}>
         <Container maxWidth="xl">
           <Typography variant="overline" sx={{ color: "primary.main", letterSpacing: "0.18em" }}>LEADERSHIP</Typography>
           <Typography variant="h2" sx={{ fontSize: { xs: "1.8rem", md: "2.4rem" }, mt: 1, fontFamily: "var(--font-syne), sans-serif" }}>
@@ -155,7 +155,7 @@ export default function AboutPage() {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
 
       <Box sx={{ py: { xs: 9, md: 11 }, backgroundColor: "background.default" }}>
         <Container maxWidth="xl">

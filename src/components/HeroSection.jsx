@@ -29,7 +29,6 @@ const stats = [
 ];
 
 const trustItems = [
-  "UK Head Office",
   "Cloud Data Experts",
   "Scalable Architecture",
   "Startup Friendly",
@@ -241,7 +240,7 @@ export default function HeroSection() {
                 },
               }}
             >
-              {isUltraSmall ? "Free Consultation" : "Book a Free Strategy Call"}
+              {isUltraSmall ? "Let's Talk" : "Book a free Stratigic call"}
             </Button>
             <Button
               variant="outlined"
@@ -316,7 +315,7 @@ export default function HeroSection() {
             ))}
           </Stack>
 
-          <Box
+          {/* <Box
             ref={statsRef}
             sx={{
               mt: 6,
@@ -336,7 +335,7 @@ export default function HeroSection() {
                 </Typography>
               </Box>
             ))}
-          </Box>
+          </Box> */}
         </Box>
       </Container>
 
