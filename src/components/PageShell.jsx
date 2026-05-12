@@ -6,7 +6,7 @@ export default function PageShell({ children }) {
   return (
     <>
       <Navbar />
-      <Box component="main" sx={{ pt: { xs: "84px", md: "92px" } }}>
+      <Box component="main" sx={{ pt: { xs: "80px", md: "92px" } }}>
         {children}
       </Box>
       <Footer />

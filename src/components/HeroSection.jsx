@@ -132,7 +132,7 @@ export default function HeroSection() {
       ref={sectionRef}
       className={styles.section}
       sx={{
-        minHeight: { xs: "100vh", lg: "100vh" },
+        minHeight: { xs: "100dvh", lg: "100dvh" },
         display: "grid",
         alignItems: "center",
       }}
@@ -146,7 +146,7 @@ export default function HeroSection() {
       <Container
         maxWidth="xl"
         sx={{
-          py: { xs: 12, sm: 14, md: 16, lg: 18 },
+          py: { xs: 2, sm: 4, md: 6, lg: 8 },
           px: { xs: 2, sm: 3, md: 4 },
           position: "relative",
           zIndex: 2,

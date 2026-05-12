@@ -51,7 +51,7 @@ export default function AboutPage() {
           <Typography sx={{ mt: 3, color: "text.secondary", maxWidth: 760, fontSize: "1.1rem", lineHeight: 1.65 }}>
             Datasynex is a UK-headquartered data engineering and cloud solutions company. Since 2019 we have helped 60+ startups, scale-ups and enterprises ship production-grade systems — combining hands-on engineering with the discipline of senior architects who have done it before.
           </Typography>
-          <Stack direction="row" spacing={2} sx={{ mt: 4, flexWrap: "wrap", gap: 2 }}>
+          <Stack direction="row" spacing={2} sx={{ mt: 4, flexWrap: "wrap", gap: { xs: 0, md: 2 } }}>
             <Button href="/contact-us" variant="contained" sx={{ background: "var(--gradient)", color: "#fff", px: 3.5, py: 1.4 }}>Talk to a Principal</Button>
             <Button href="/services" variant="outlined" sx={{ px: 3.5, py: 1.4 }}>View our services</Button>
           </Stack>
