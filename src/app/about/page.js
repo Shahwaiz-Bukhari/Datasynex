@@ -102,7 +102,7 @@ export default function AboutPage() {
             {principles.map((p, i) => (
               <Grid key={p.title} size={{ xs: 12, sm: 6 }}>
                 <Box sx={{ p: 4, borderRadius: 3, border: "1px solid", borderColor: "divider", backgroundColor: "background.paper", height: "100%", transition: "all .3s ease", "&:hover": { borderColor: "primary.main", transform: "translateY(-4px)", boxShadow: "0 14px 30px rgba(26,111,255,0.12)" } }}>
-                  <Typography sx={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "0.78rem", color: "primary.main", letterSpacing: "0.12em" }}>{`0${i + 1}.`}</Typography>
+                  {/* <Typography sx={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "0.78rem", color: "primary.main", letterSpacing: "0.12em" }}>{`0${i + 1}.`}</Typography> */}
                   <Typography variant="h6" sx={{ mt: 1.5, fontWeight: 700, fontFamily: "var(--font-syne), sans-serif" }}>{p.title}</Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary", lineHeight: 1.65 }}>{p.text}</Typography>
                 </Box>

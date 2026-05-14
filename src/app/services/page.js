@@ -9,13 +9,13 @@ export const metadata = {
 
 const services = [
   {
-    code: "01",
+    // code: "01",
     title: "ETL Pipeline Development",
     text: "Production-grade ingestion and transformation pipelines for batch and streaming workloads. Built on Airflow, dbt, Spark and Flink with full observability.",
     points: ["Stream + batch unified", "dbt-native modelling", "SLA-backed pipelines", "Lineage & data quality"],
   },
   {
-    code: "02",
+    // code: "02",
     title: "Data Lake & Warehouse Architecture",
     text: "Modern lakehouse foundations on Snowflake, BigQuery, Databricks and Iceberg. Governance, partitioning and cost controls baked in.",
     points: ["Lakehouse on Iceberg / Delta", "Medallion architecture", "Cost-tier partitioning", "Catalog & access control"],
@@ -64,7 +64,7 @@ export default function ServicesPage() {
       <Box sx={{ py: { xs: 9, md: 12 }, backgroundColor: "custom.surface", position: "relative", overflow: "hidden" }}>
         <Box sx={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 0% 0%, rgba(26,111,255,0.10), transparent 50%)", pointerEvents: "none" }} />
         <Container maxWidth="xl" sx={{ position: "relative" }}>
-          <Typography variant="overline" sx={{ color: "primary.main", letterSpacing: "0.18em", fontFamily: "var(--font-jetbrains), monospace" }}>— Services</Typography>
+          <Typography variant="overline" sx={{ color: "primary.main", letterSpacing: "0.18em", fontFamily: "var(--font-jetbrains), monospace" }}>Services</Typography>
           <Typography variant="h1" sx={{ fontSize: { xs: "2.2rem", md: "3.6rem" }, maxWidth: 920, mt: 1.5, lineHeight: 1.1, fontFamily: "var(--font-syne), sans-serif" }}>
             Six core services. Built for teams who actually have to ship.
           </Typography>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
               <Grid key={s.title} size={{ xs: 12, md: 6 }}>
                 <Box sx={{ p: { xs: 3.5, md: 4.5 }, borderRadius: 3, border: "1px solid", borderColor: "divider", backgroundColor: "background.paper", height: "100%", position: "relative", overflow: "hidden", transition: "all .3s ease", "&:hover": { borderColor: "primary.main", transform: "translateY(-4px)", boxShadow: "0 18px 40px rgba(26,111,255,0.12)" }, "&::before": { content: '""', position: "absolute", top: 0, left: 0, width: 4, height: "100%", background: "var(--gradient)" } }}>
                   <Stack direction="row" spacing={2} sx={{ mb: 1, alignItems: "center" }}>
-                    <Box sx={{ fontFamily: "var(--font-jetbrains), monospace", color: "primary.main", fontSize: "0.85rem", letterSpacing: "0.16em" }}>{s.code}</Box>
+                    {/* <Box sx={{ fontFamily: "var(--font-jetbrains), monospace", color: "primary.main", fontSize: "0.85rem", letterSpacing: "0.16em" }}>{s.code}</Box> */}
                   </Stack>
                   <Typography variant="h5" sx={{ fontWeight: 700, fontFamily: "var(--font-syne), sans-serif", letterSpacing: "-0.02em" }}>{s.title}</Typography>
                   <Typography sx={{ mt: 1.5, color: "text.secondary", lineHeight: 1.7 }}>{s.text}</Typography>

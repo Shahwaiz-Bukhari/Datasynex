@@ -222,7 +222,7 @@ export default function ServicesSection() {
         </Box>
 
         {/* Cards grid */}
-        <Grid container spacing={3} alignItems="stretch">
+        <Grid container spacing={3} sx={{ alignItems: "stretch" }}>
           {services.map((service, index) => {
             const Icon = service.Icon;
             return (

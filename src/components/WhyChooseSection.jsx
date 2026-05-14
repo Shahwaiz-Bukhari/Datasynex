@@ -52,7 +52,7 @@ export default function WhyChooseSection() {
           Why Choose Datasynex?
         </Typography>
 
-        <Grid container spacing={2.4} sx={{ mt: 2 }} alignItems="stretch">
+        <Grid container spacing={2.4} sx={{ mt: 2, alignItems: "stretch" }}>
           {reasons.map((reason, index) => (
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={reason.title} sx={{ display: "flex" }}>
               <MotionBox
