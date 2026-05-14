@@ -6,7 +6,7 @@ import CTASection from "../components/CTASection";
 import HeroSection from "../components/HeroSection";
 import IndustriesSection from "../components/IndustriesSection";
 import IntroSection from "../components/IntroSection";
-// import LogoMarqueeSection from "../components/LogoMarqueeSection";
+import LogoMarqueeSection from "../components/LogoMarqueeSection";
 import PageShell from "../components/PageShell";
 import Preloader from "../components/Preloader";
 import ProcessSection from "../components/ProcessSection";
@@ -30,7 +30,7 @@ export default function Home() {
       <PageShell>
         <Box>
           <HeroSection />
-          {/* <LogoMarqueeSection /> */}
+          <LogoMarqueeSection />
           <IntroSection />
           <WhyChooseSection />
           <ServicesSection />

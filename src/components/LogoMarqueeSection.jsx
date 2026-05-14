@@ -10,17 +10,17 @@ if (typeof window !== "undefined") {
 }
 
 const rowA = [
-  "Lendora", "Northwind", "Klarisma", "FieldKit", "Plotwise",
-  "Brightlane", "Nimbus", "Quanta", "Helix", "Voltaq", "Stratos",
+  "AWS", "Azure", "Google Cloud", "Snowflake", "Databricks",
+  "Redshift", "BigQuery", "Synapse", "Apache Spark", "Apache Flink", "Delta Lake",
 ];
 
 const rowB = [
-  "Orbital", "Pulse", "Mosaic", "Lumen", "Vectra",
-  "Cobalt", "Aether", "Polaris", "Ascend", "Foundry", "Synapse",
+  "Apache Kafka", "Apache Airflow", "dbt", "Fivetran", "Kinesis",
+  "Terraform", "Kubernetes", "Docker", "Prefect", "Great Expectations", "Looker",
 ];
 
 function LogoChip({ name }) {
-  const initial = name.slice(0, 2).toUpperCase();
+  const initial = name.replace(/[^A-Za-z0-9]/g, "").slice(0, 2).toUpperCase();
   return (
     <div className={styles.logo} data-cursor="hover" data-cursor-label={name}>
       <span className={styles.logoIcon}>{initial}</span>
@@ -87,9 +87,9 @@ export default function LogoMarqueeSection() {
   return (
     <section ref={sectionRef} className={styles.section}>
       <div className={styles.header}>
-        <div className={styles.kicker}>Trusted Partners</div>
+        <div className={styles.kicker}>Our Tech Stack</div>
         <h2 className={styles.title}>
-          Companies <span>building the future</span> with Datasynex
+          Technologies <span>powering modern data</span> at Datasynex
         </h2>
       </div>
 
@@ -106,7 +106,7 @@ export default function LogoMarqueeSection() {
       </div>
 
       <p className={styles.note}>
-        From Series A to enterprise · 60+ production deployments shipped
+        Cloud · Data · DevOps · AI/ML · 40+ tools across our delivery toolkit
       </p>
     </section>
   );

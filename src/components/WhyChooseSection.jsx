@@ -52,9 +52,9 @@ export default function WhyChooseSection() {
           Why Choose Datasynex?
         </Typography>
 
-        <Grid container spacing={2.4} sx={{ mt: 2 }}>
+        <Grid container spacing={2.4} sx={{ mt: 2 }} alignItems="stretch">
           {reasons.map((reason, index) => (
-            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={reason.title}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={reason.title} sx={{ display: "flex" }}>
               <MotionBox
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -66,37 +66,21 @@ export default function WhyChooseSection() {
                   backgroundColor: "background.paper",
                   border: "1px solid",
                   borderColor: "divider",
-                  boxShadow: 1,
-                  minHeight: 168,
+                  boxShadow: "0 18px 40px rgba(10, 22, 40, 0.12), 0 4px 12px rgba(26, 111, 255, 0.08)",
+                  width: "100%",
+                  height: 220,
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between",
+                  justifyContent: "flex-start",
                   transition: "transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease",
                   "&:hover": {
                     transform: "translateY(-8px)",
                     borderColor: "primary.main",
-                    boxShadow: "0 14px 30px rgba(26,111,255,0.16)",
+                    boxShadow: "0 28px 60px rgba(10, 22, 40, 0.18), 0 10px 24px rgba(26, 111, 255, 0.22)",
                   },
                 }}
               >
-                <Box
-                  sx={{
-                    width: 38,
-                    height: 38,
-                    borderRadius: "50%",
-                    display: "grid",
-                    placeItems: "center",
-                    color: "primary.main",
-                    border: "1px solid",
-                    borderColor: "divider",
-                    backgroundColor: "custom.surface",
-                    fontWeight: 700,
-                    fontFamily: "var(--font-jetbrains), monospace",
-                  }}
-                >
-                  {`0${index + 1}`}
-                </Box>
-                <Typography sx={{ mt: 2, color: "text.primary", fontWeight: 600, fontSize: "1.05rem" }}>{reason.title}</Typography>
+                <Typography sx={{ color: "text.primary", fontWeight: 600, fontSize: "1.05rem" }}>{reason.title}</Typography>
                 <Typography sx={{ mt: 1, color: "text.secondary", fontSize: "0.9rem", lineHeight: 1.55 }}>{reason.text}</Typography>
               </MotionBox>
             </Grid>
